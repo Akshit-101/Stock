@@ -1,3 +1,3 @@
 # Stock
 
-# This is stock project
+# This is stock project related to stock details.
