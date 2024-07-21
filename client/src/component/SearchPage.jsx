@@ -14,7 +14,7 @@ function SearchPage() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get('http://localhost:3000/news');
+      const response = await axios.get('https://stock-dpyk.onrender.com/news');
       setNews(response.data.data || []);
     } catch (error) {
       setError('Failed to fetch news');
@@ -25,7 +25,7 @@ function SearchPage() {
 
   const fetchStocks = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/stocks');
+      const response = await axios.get('https://stock-dpyk.onrender.com/stocks');
       setStocks(response.data || []);
     } catch (error) {
       console.error('Failed to fetch stocks', error);
@@ -36,7 +36,7 @@ function SearchPage() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`http://localhost:3000/stocks/${name}`);
+      const response = await axios.get(`https://stock-dpyk.onrender.com/stocks/${name}`);
       setStockData(response.data || null);
     } catch (error) {
       setError('Failed to fetch stock details');
